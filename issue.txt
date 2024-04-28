@@ -1,0 +1,8 @@
+The issue here is that we have a given fallback function in our struct `Mystruct` that is taking 
+a reference as a parameter.
+The parameter that we are trying to feed is an other reference.
+In order for this to compile, the compiler needs to know that the reference we're 
+trying to feed outlive the callback lifetime.
+
+The solution I submit assumes that we will always give the same type to the callbacks,
+since they are stored in the `MyStruct` struct and not a parameter of the `do_something` function.

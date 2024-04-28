@@ -1,5 +1,5 @@
 mod changeme;
-use changeme::{MyTrait,MyStruct,MyCallback,MyCallbackData};
+use changeme::{MyCallback, MyCallbackData, MyStruct, MyTrait};
 
 fn main() {
     let mut s = MyStruct {
